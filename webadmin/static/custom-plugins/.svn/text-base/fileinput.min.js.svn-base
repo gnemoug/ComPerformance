@@ -1,0 +1,17 @@
+/*
+ * MWS Admin v2.1 - FileInput Plugin JS
+ * This file is part of MWS Admin, an Admin template build for sale at ThemeForest.
+ * All copyright to this file is hold by Mairel Theafila <maimairel@yahoo.com> a.k.a nagaemas on ThemeForest.
+ * Last Updated:
+ * December 08, 2012
+ *
+ * 'Highly configurable' mutable plugin boilerplate
+ * Author: @markdalgleish
+ * Further changes, comments: @addyosmani
+ * Licensed under the MIT license
+ *
+ */
+
+;(function(b,e,f,d){function c(a,b){arguments.length&&this._init(a,b)}c.prototype={defaults:{placeholder:"No file selected...",buttontext:"Browse..."},_init:function(a,c){this.element=b(a);this.options=b.extend({},this.defaults,c,this.element.data());this._build()},_build:function(){this.element.css({position:"absolute",top:0,right:0,margin:0,cursor:"pointer",fontSize:"999px",opacity:0,zIndex:999,filter:"alpha(opacity=0)"}).on("change.fileupload",b.proxy(this._change,this));this.container=b('<div class="fileinput-holder" style="position: relative;"></div>').append(b('<input type="text" class="fileinput-preview" style="width: 100%;" readonly="readonly" />').attr("placeholder",
+this.options.placeholder)).append(b('<span class="fileinput-btn btn" type="button" style="display:block; overflow: hidden; position: absolute; top: 0; right: 0; cursor: pointer;"></span>').text(this.options.buttontext)).insertAfter(this.element);var a=this.container.find(".fileinput-btn");this.element.appendTo(a);this.container.find(".fileinput-preview").css("paddingRight",a.outerWidth()+4+"px")},_change:function(a){(a=a.target.files!==d?a.target.files[0]:{name:a.target.value.replace(/^.+\\/,"")})&&
+this.container.find(".fileinput-preview ").val(a.name)}};b.fn.fileInput=function(a){return this.each(function(){new c(this,a)})}})(jQuery,window,document);

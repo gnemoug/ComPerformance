@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+                <div class="mws-panel grid_8" style="margin-bottom:0px">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>综合测评设置</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                        <input type="hidden" name='behaviorstart' id='behaviorstart' value="{{behaviorstart}}"/>
+                        <input type="hidden" name='behaviorend' id='behaviorend' value="{{behaviorend}}"/>
+                        <input type="hidden" name='developmentstart' id='developmentstart' value="{{developmentstart}}"/>
+                        <input type="hidden" name='developmentend' id='developmentend' value="{{developmentend}}"/>
+                        <input type="hidden" name='physical' id='physical' value="{{physical}}"/>
+                        <table class="mws-datatable-fn mws-table" name="comperformances" id="comperformances" style="text-align:center;">
+                            <thead>
+                                <tr>
+                                    <th>学期</th>
+                                    <th>姓名</th>
+                                    <th>学号</th>
+                                    <th>班级</th>
+                                    <th>综合素质分数</th>
+                                    {% for i in behaviors %}
+                                        <th>{{i.name}}</th>
+                                    {% endfor %}
+                                    <th>互评分数</th>
+                                    <th>体能分数</th>
+                                    <th>日常行为分数</th>
+                                    <th>基础素质分</th>
+                                    {% for i in developments %}
+                                        <th>{{i.name}}</th>
+                                    {% endfor %}
+                                    <th>个性发展分</th>
+                                    <th>编辑</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                
+                {% include "comperformance/updateselect.html" %}
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Copyright Your Website 2012. All Rights Reserved.
+            </div>
+        </div>
+        <!-- Main Container End -->
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>

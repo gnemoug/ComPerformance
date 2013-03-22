@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/management/commands
+END
+captcha_clean.py
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/management/commands/captcha_clean.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/management/commands/__init__.py
+END

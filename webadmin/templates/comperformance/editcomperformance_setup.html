@@ -1,0 +1,81 @@
+<div id="edit-comperformance_setup-dialog" style="display:none">
+<form id="edit-comperformance_setup-form" method="post" class="mws-form" action='{% url editcomperformance_setup %}'>
+    {% csrf_token %}
+        <input type="hidden" name='comperformance_setup_id' id='edit_comperformance_setup_id' val=""/>
+        <div id="edit-mws-validate-error" class="mws-form-message error" style="display:none;"></div>
+        <div class="mws-form-inline">
+            <div class="mws-form-row">
+                <label class="mws-form-label">学期(2012年秋)</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editterm' name='term' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">互评最高分</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editmoral' name='moral' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">日常行为分最高分</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editbehaviorup' name='behaviorup' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">体能分数</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editphysical' name='physical' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">优分数</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editexcellent' name='excellent' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">良分数</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editgood' name='good' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">中分数</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editordinary' name='ordinary' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">单项最高分</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editdevelopment' name='development' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">日常行为分基础分</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editbehavior' name='behavior' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

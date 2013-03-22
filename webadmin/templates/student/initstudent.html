@@ -1,0 +1,9 @@
+<div id="init-student-dialog" style="display:none">
+<form id="init-student-form" method="post" class="mws-form" action='{% url initstudent %}'>
+    {% csrf_token %}
+    <div class="mws-form-message info" style="text-align:center;">
+        您确定要初始化这位同学的密码吗?
+    </div>
+        <input type="hidden" name='id' id='init_student_id'/>
+    </form>
+</div>

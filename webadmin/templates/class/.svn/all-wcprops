@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ComPerformance/!svn/ver/8/trunk/webadmin/templates/class
+END
+class.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ComPerformance/!svn/ver/8/trunk/webadmin/templates/class/class.html
+END
+deleteclass.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ComPerformance/!svn/ver/8/trunk/webadmin/templates/class/deleteclass.html
+END
+editclass.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ComPerformance/!svn/ver/8/trunk/webadmin/templates/class/editclass.html
+END
+addclass.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ComPerformance/!svn/ver/7/trunk/webadmin/templates/class/addclass.html
+END
+select.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ComPerformance/!svn/ver/8/trunk/webadmin/templates/class/select.html
+END

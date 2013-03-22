@@ -1,0 +1,9 @@
+<div id="delete-student-dialog" style="display:none">
+<form id="delete-student-form" method="post" class="mws-form" action='{% url deletestudent %}'>
+    {% csrf_token %}
+    <div class="mws-form-message info" style="text-align:center;">
+        您确定要删除这行吗?
+    </div>
+        <input type="hidden" name='id' id='delete_student_id'/>
+    </form>
+</div>

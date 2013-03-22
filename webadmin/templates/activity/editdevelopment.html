@@ -1,0 +1,28 @@
+<div id="edit-development-dialog" style="display:none">
+<form id="edit-development-form" method="post" class="mws-form" action='{% url editdevelopment %}'>
+    {% csrf_token %}
+    <input type="hidden" name='development_id' id='edit_development_id' val=""/>
+        <div class="mws-form-inline">
+            <div class="mws-form-row">
+                <label class="mws-form-label">个性发展大类</label>
+                <div class="mws-form-item large">
+                    <div id='editdevelopmentlevel'>
+                        <input type="radio" id='editdevelopmentlevel0' name='developmentlevel' value='0'/><label for='editdevelopmentlevel0'>组织管理</label>
+                        <input type="radio" id='editdevelopmentlevel1' name='developmentlevel' value='1'/><label for='editdevelopmentlevel1'>创新</label>
+                        <input type="radio" id='editdevelopmentlevel3' name='developmentlevel' value='1'/><label for='editdevelopmentlevel3'>其他</label>
+                    </div>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">名称</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editdevelopmentname' name='developmentname' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

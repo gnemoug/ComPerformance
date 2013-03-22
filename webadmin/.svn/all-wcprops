@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ComPerformance/!svn/ver/15/trunk/webadmin
+END
+HOWDATATABLES
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/HOWDATATABLES
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ComPerformance/!svn/ver/5/trunk/webadmin/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ComPerformance/!svn/ver/16/trunk/webadmin/settings.py
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/__init__.pyc
+END
+settings.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ComPerformance/!svn/ver/16/trunk/webadmin/settings.pyc
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/urls.py
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ComPerformance/!svn/ver/5/trunk/webadmin/manage.py
+END
+urls.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/urls.pyc
+END

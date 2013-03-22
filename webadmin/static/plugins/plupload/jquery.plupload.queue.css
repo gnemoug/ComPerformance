@@ -1,0 +1,196 @@
+/* 
+   Plupload
+------------------------------------------------------------------- */
+
+.plupload_button
+{
+	text-decoration:none;
+	text-align:center;
+	margin:0 4px 8px 0;
+	padding:3px 8px 3px 28px;
+	line-height:16px;
+	display:inline-block;
+	outline:none;
+	
+	background-color:#e0e0e0;
+	color:#666666;
+	border:1px solid #ababab;
+	
+	
+	
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+		border-radius:3px;
+	
+	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.plupload_button:not(.plupload_disabled):active
+{	
+	
+	
+	-webkit-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.2) !important;
+	-moz-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.2) !important;
+	box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.plupload_disabled {
+	background:#f0f0f0;
+	border:1px solid #d0d0d0;
+	color:#bbbbbb;
+	cursor:default;
+	
+	
+	
+	-moz-box-shadow: inset 0px 1px 0px #ffffff !important;
+	-webkit-box-shadow: inset 0px 1px 0px #ffffff !important;
+	box-shadow: inner 0px 1px 0px #ffffff !important;
+}
+
+.plupload_add {
+	background:url(images/add.png) no-repeat 8px center;
+}
+
+.plupload_start {
+	background:url(images/upload_icon.png) no-repeat 8px center;
+}
+.plupload_start.plupload_disabled {
+	background:url(images/upload_disabled.png) no-repeat 8px center;
+}
+
+.plupload_wrapper {
+	width: 100%;
+}
+
+.plupload_container input {
+	border: 1px solid #DDD;
+	font: normal 11px Verdana,sans-serif;
+	width: 98%;
+}
+
+.plupload_header { border-bottom:1px solid #d5d5d5; }
+.plupload_header_content {
+	background:url(images/upload.png) no-repeat 14px center;
+	min-height: 56px;
+	padding-left: 60px;
+	line-height: 1.5;
+}
+.plupload_header_title {
+	font-size:18px;
+	padding: 4px 0 0 0 ;
+}
+.plupload_header_text {
+	font-size:12px;
+}
+
+.plupload_filelist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.plupload_scroll .plupload_filelist {
+	height: 185px;
+	font-size:12px;
+	background: #ffffff;
+	overflow-y: scroll;
+	border-bottom:1px solid #d5d5d5;
+}
+
+.plupload_filelist li {
+	padding: 10px 8px;
+	background: #fafafa;
+	margin:0;
+	border-bottom: 1px solid #DDD;
+}
+
+.plupload_filelist_header, .plupload_filelist_footer {
+	background: #f0f0f0;
+	padding: 8px 8px;
+	color: #42454A;
+}
+.plupload_filelist_header {	
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.plupload_filelist_footer {border-top: 1px solid #ffffff; height: 22px; line-height: 20px; vertical-align: middle;}
+.plupload_file_name {float: left; overflow: hidden}
+.plupload_file_status {color: #777;}
+.plupload_file_status span {color: #42454A;}
+.plupload_file_size, .plupload_file_status, .plupload_progress {
+	float: right;
+	width: 80px;
+}
+.plupload_file_size, .plupload_file_status, .plupload_file_action {text-align: right;}
+
+.plupload_filelist .plupload_file_name {width: 205px}
+
+.plupload_file_action {
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin-left: 15px;
+}
+
+.plupload_file_action * {
+	display: none;
+	width: 16px;
+	height: 16px;
+}
+
+li.plupload_uploading {background: #ECF3DC;}
+li.plupload_done {color:#AAA}
+
+li.plupload_delete a {
+	background:url(images/delete.gif) no-repeat;
+}
+
+li.plupload_failed a {
+	background:url(images/error.gif) no-repeat;
+	cursor: default;
+}
+
+li.plupload_done a {
+	background:url(images/done.gif) no-repeat;
+	cursor: default;
+}
+
+.plupload_progress, .plupload_upload_status {
+	display: none;
+}
+
+.plupload_progress_container {
+	margin-top: 3px;
+	border: 1px solid #CCC;
+	background: #FFF;
+	padding: 1px;
+}
+.plupload_progress_bar {
+	width: 0px;
+	height: 7px;
+	background: #CDEB8B;
+}
+
+.plupload_scroll .plupload_filelist_header .plupload_file_action, .plupload_scroll .plupload_filelist_footer .plupload_file_action {
+	margin-right: 17px;
+}
+
+/* Floats */
+
+.plupload_clear,.plupload_clearer {clear: both;}
+.plupload_clearer, .plupload_progress_bar {
+	display: block;
+	font-size: 0;
+	line-height: 0;	
+}
+
+li.plupload_droptext {
+	background: transparent;
+	text-align: center;
+	vertical-align: middle;
+	border: 0;
+	line-height: 165px;
+}

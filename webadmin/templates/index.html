@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+<body>
+
+	{% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+		{% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <!-- Inner Container Start -->
+	        <div class="mws-panel grid_8">
+    	        <div class="mws-panel-header">
+        	        <span><i class="icon-magic"></i>首页</span>
+                </div>
+            <div class="index-content mws-panel-body">
+                <img src="{{ STATIC_URL }}images/comperformance/index.png" alt="mws admin">
+            </div>
+        </div>
+        <!-- Footer -->
+        <div id="mws-footer">
+         	Copyright Your Website 2012. All Rights Reserved.
+        </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+	{% include "footer.html" %}
+</body>
+</html>

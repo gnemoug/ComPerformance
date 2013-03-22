@@ -1,0 +1,36 @@
+<head>
+<meta charset="utf-8" />
+
+<!-- Viewport Metatag -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+                                                                                                               
+<!-- Plugin Stylesheets first to ease overrides -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}plugins/colorpicker/colorpicker.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}custom-plugins/wizard/wizard.css" media="screen" />
+
+<!-- Required Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/fonts/ptsans/stylesheet.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/fonts/icomoon/style.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/mws-style.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/icons/icol16.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/icons/icol32.css" media="screen" />
+
+<!-- Demo Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/demo.css" media="screen" />
+
+<!-- jQuery-UI Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jui/css/jquery.ui.all.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jui/jquery-ui.custom.css" media="screen" />
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/mws-theme.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/themer.css" media="screen" />
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/comperformance/style.css" media="screen" />
+{% endblock %}
+<title>{% block title %}综合成绩管理系统-{{ title }}{% endblock %}</title>
+
+</head>

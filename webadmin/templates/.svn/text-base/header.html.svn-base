@@ -1,0 +1,44 @@
+    <!-- Header -->
+    <div id="mws-header" class="clearfix">
+    
+        <!-- Logo Container -->
+        <div id="mws-logo-container">
+        
+            <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+            <div id="mws-logo-wrap">
+                <img src="{{ STATIC_URL }}images/comperformance/logo/logo.png" alt="mws admin">
+            </div>
+        </div>
+        
+        <!-- User Tools (notifications, logout, profile, change password) -->
+        <div id="mws-user-tools" class="clearfix">
+            
+            <!-- User Information and functions section -->
+            <div id="mws-user-info" class="mws-inset">
+            
+                <!-- User Photo -->
+                <div id="mws-user-photo">
+                    {% if user.is_superuser %}
+                        <img src="{{ STATIC_URL }}images/comperformance/administor.png" alt="User Photo">
+                    {% else %}
+                        <img src="{{ STATIC_URL }}images/comperformance/student.png" alt="User Photo">
+                    {% endif %}
+                </div>
+                
+                <!-- Username and Functions -->
+                <div id="mws-user-functions">
+                    <div id="mws-username">
+                        你好,{{ username }}
+                    </div>
+                    <ul>
+                    {% if not user.is_superuser %}
+                        <li><a href="{% url studentprofile %}">详细信息</a></li>
+                    {% endif %}
+                        <li><div id="change-password" style="display:inline"><a href="dashboard.html#">修改密码</a></div></li>
+                        <li><a href="{% url userlogout %}">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "accounts/change_password.html" %}

@@ -1,0 +1,13 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+
+from django.contrib import admin
+from models import  Class, Student, Assessment, AssessmentRecord,AssessmentRow,\
+    Grade
+
+admin.site.register(Class)
+admin.site.register(Student)
+admin.site.register(Assessment)
+admin.site.register(AssessmentRecord)
+admin.site.register(AssessmentRow)
+admin.site.register(Grade)

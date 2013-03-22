@@ -1,0 +1,68 @@
+{% load leftmenu %}
+        <!-- Necessary markup, do not remove -->
+        <div id="mws-sidebar-stitch"></div>
+        <div id="mws-sidebar-bg"></div>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar">
+        
+            <!-- Hidden Nav Collapse Button -->
+            <div id="mws-nav-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div id="mws-navigation">
+                <ul>
+                    {% if user.is_superuser %}
+                    <li><a href="{% url manageclass %}"><i class="icol32-group"></i>班级管理</a></li>
+                    <li><a href="{% url managestudent %}"><i class="icol32-user-green"></i>同学管理</a></li>
+                    <li><a href="{% url manageassessment %}"><i class="icol32-group-edit"></i>互评管理</a>
+                        <ul>
+                            <li><a href="{% url viewassessment %}">查看互评</a></li>
+                            <li><a href="{% url manageassessment %}">互评设置</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% if not user.is_superuser %}
+                    <li><a href="{% url manageassessment %}"><i class="icol32-group-edit"></i>互评管理</a>
+                        <ul>
+                            {% go_assess %}
+                            <li><a href="{% url viewassessment %}">我的互评</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    <li><a href="{% url managegrades %}"><i class="icol32-document-prepare"></i>成绩管理</a>
+                        <ul>
+                            {% if user.is_superuser %}
+                                <li><a href="{% url importgrades %}">导入成绩单</a></li>
+                            {% endif %}
+                            <li><a href="{% url classgrades %}">班级成绩</a></li>
+                            <li><a href="{% url managegrades %}">同学成绩</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="table.html"><i class="icol32-sport-soccer"></i>个性发展管理</a></li>
+                    <li>
+                        <a href="dashboard.html#"><i class="icol32-document-quote"></i>综合测评管理</a>
+                        <ul>
+                            <li><a href="form_layouts.html">Layouts</a></li>
+                            <li><a href="form_elements.html">Elements</a></li>
+                            <li><a href="form_wizard.html">Wizard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="widgets.html"><i class="icon-cogs"></i> Widgets</a></li>
+                    <li><a href="typography.html"><i class="icon-font"></i> Typography</a></li>
+                    <li><a href="grids.html"><i class="icon-th"></i> Grids &amp; Panels</a></li>
+                    <li><a href="gallery.html"><i class="icon-pictures"></i> Gallery</a></li>
+                    <li><a href="error.html"><i class="icon-warning-sign"></i> Error Page</a></li>
+                    <li>
+                        <a href="icons.html">
+                            <i class="icon-pacman"></i> 
+                            Icons <span class="mws-nav-tooltip">2000+</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>         
+        </div>

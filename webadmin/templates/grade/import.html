@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+                {% if form.grades.errors %}
+                    <div class="mws-form-message error" >
+                        {% if form.grades.errors %}
+                            {{ form.grades.errors }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if success %}
+                    <div id='success' class="mws-form-message success">
+                        您已经{{successinfo}}成功!
+                    </div>
+                {% endif %}
+                <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>成绩管理</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                    <div class="wizard-nav wizard-nav-horizontal">
+                        <ul>
+                            <li data-wzd-id="wzd_17e9qcp1i1flsjc21g6n_0" class="current">
+                                <span>
+                                    <i class="icol-accept"></i>导入成绩单
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                        <form id="importgrades" method="post" enctype="multipart/form-data" class="mws-form" action="{% url importgrades %}">
+                            {% csrf_token %}
+                            <fieldset id="step-1" class="mws-form-inline">
+                                <legend class="wizard-label" style="display:none"><i class="icol-accept"></i>导入成绩单</legend>
+                                <div class="mws-form-row">
+                                    <label class="mws-form-label">成绩单<span class="required">*</span></label>
+                                    <div class="mws-form-item">
+                                        <input type="file" name="grades" id='grades' {% if form.grades.errors %} class="error" {% endif %}/>
+                                        <label for="picture" class="error" generated="true" style="display:none"></label>
+                                        <div class="error-messages">
+                                            {% if form.grades.errors %}
+                                                <label for="grades" generated="true" class="error" style="">{{form.grades.errors}}</label>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mws-button-row">
+                                    <center>
+                                        <input type="submit" value="提交" class="btn btn-danger" />
+                                        <input type="reset" value="重置" class="btn " />
+                                    </center>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Copyright Your Website 2012. All Rights Reserved.
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>

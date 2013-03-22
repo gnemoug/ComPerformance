@@ -1,0 +1,69 @@
+{% load leftmenu %}
+        <!-- Necessary markup, do not remove -->
+        <div id="mws-sidebar-stitch"></div>
+        <div id="mws-sidebar-bg"></div>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar">
+        
+            <!-- Hidden Nav Collapse Button -->
+            <div id="mws-nav-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div id="mws-navigation">
+                <ul>
+                    {% if user.is_superuser %}
+                    <li><a href="{% url manageclass %}"><i class="icol32-group"></i>班级管理</a></li>
+                    <li><a href="{% url managestudent %}"><i class="icol32-user-green"></i>同学管理</a></li>
+                    <li><a href="{% url manageassessment %}"><i class="icol32-group-edit"></i>互评管理</a>
+                        <ul>
+                            <li><a href="{% url viewassessment %}">查看互评</a></li>
+                            <li><a href="{% url manageassessment %}">互评设置</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% if not user.is_superuser %}
+                    <li><a href="{% url manageassessment %}"><i class="icol32-group-edit"></i>互评管理</a>
+                        <ul>
+                            {% go_assess %}
+                            <li><a href="{% url viewassessment %}">我的互评</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    <li><a href="{% url managegrades %}"><i class="icol32-document-prepare"></i>成绩管理</a>
+                        <ul>
+                            {% if user.is_superuser %}
+                                <li><a href="{% url importgrades %}">导入成绩单</a></li>
+                            {% endif %}
+                            <li><a href="{% url classgrades %}">班级成绩</a></li>
+                            <li><a href="{% url managegrades %}">同学成绩</a></li>
+                        </ul>
+                    </li>
+                    {% if user.is_superuser %}
+                    <li><a href="{% url behavior %}"><i class="icol32-sport-soccer"></i>活动管理</a>
+                        <ul>
+                            <li><a href="{% url behavior %}">日常行为活动</a></li>
+                            <li><a href="{% url development %}">个性发展活动</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href=""><i class="icol32-document-quote"></i>综合测评管理</a>
+                        <ul>
+                            {% if user.is_superuser %}
+                                <li><a href="{% url comperformance_setup %}">综合测评设置</a></li>
+                                <li><a href="{% url comperformance %}">综合测评-同学</a></li>
+                            {% endif %}
+                            <li><a href="{% url classcomperformances %}">综合测评-班级</a></li>
+                            {% if not user.is_superuser %}
+                                <li><a href="{% url studentcomperformance %}">查看综合-同学</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>         
+        </div>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ComPerformance/!svn/ver/15/trunk/webadmin/templates/assessment
+END
+addassessment.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/assessment/addassessment.html
+END
+resultnum.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ComPerformance/!svn/ver/16/trunk/webadmin/templates/assessment/resultnum.html
+END
+select.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/assessment/select.html
+END
+viewassessments.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ComPerformance/!svn/ver/15/trunk/webadmin/templates/assessment/viewassessments.html
+END
+assessment.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/assessment/assessment.html
+END
+deleteassessment.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/assessment/deleteassessment.html
+END
+editassessment.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/assessment/editassessment.html
+END
+goassessment.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ComPerformance/!svn/ver/16/trunk/webadmin/templates/assessment/goassessment.html
+END

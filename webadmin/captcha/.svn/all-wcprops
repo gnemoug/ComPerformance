@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/infosecurity/!svn/ver/110/WebServer/register/captcha
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/infosecurity/!svn/ver/110/WebServer/register/captcha/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/__init__.py
+END
+helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/helpers.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/infosecurity/!svn/ver/83/WebServer/register/captcha/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/infosecurity/!svn/ver/110/WebServer/register/captcha/urls.py
+END
+fields.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/infosecurity/!svn/ver/110/WebServer/register/captcha/fields.py
+END

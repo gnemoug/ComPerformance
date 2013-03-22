@@ -1,0 +1,43 @@
+    <!-- JavaScript Plugins -->
+    <script src="{{STATIC_URL}}js/libs/jquery-1.8.3.min.js"></script>
+    <script src="{{STATIC_URL}}js/libs/jquery.mousewheel.min.js"></script>
+    <script src="{{STATIC_URL}}js/libs/jquery.placeholder.min.js"></script>
+    <script src="{{STATIC_URL}}custom-plugins/fileinput.min.js"></script>
+    
+    <!-- jQuery-UI Dependent Scripts -->
+    <script src="{{STATIC_URL}}jui/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="{{STATIC_URL}}jui/jquery-ui.custom.min.js"></script>
+    <script src="{{STATIC_URL}}jui/js/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="{{STATIC_URL}}plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/libs/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="{{STATIC_URL}}plugins/flot/jquery.flot.min.js"></script>
+    <script src="{{STATIC_URL}}plugins/flot/plugins/jquery.flot.tooltip.min.js"></script>
+    <script src="{{STATIC_URL}}plugins/flot/plugins/jquery.flot.pie.min.js"></script>
+    <script src="{{STATIC_URL}}plugins/flot/plugins/jquery.flot.stack.min.js"></script>
+    <script src="{{STATIC_URL}}plugins/flot/plugins/jquery.flot.resize.min.js"></script>
+    <script src="{{STATIC_URL}}plugins/colorpicker/colorpicker-min.js"></script>
+    <script src="{{STATIC_URL}}plugins/validate/jquery.validate-min.js"></script>
+    <script src="{{STATIC_URL}}plugins/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}plugins/highcharts/themes/gray.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}plugins/highcharts/modules/exporting.js"></script>
+    <script src="{{STATIC_URL}}custom-plugins/wizard/wizard.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}plugins/jCombo/jquery.jCombo.js"></script>
+
+    <!-- Core Script -->
+    <script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{STATIC_URL}}js/core/mws.js"></script>
+
+    <!-- Themer Script (Remove if not needed) -->
+    <script src="{{STATIC_URL}}js/core/themer.js"></script>
+
+    <!-- custom by myself -->
+    <script type="text/javascript" src="{{STATIC_URL}}js/comperformance/comperformance.table.js"></script>
+    <script src="{{STATIC_URL}}js/comperformance/comperformance.widget.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}js/comperformance/comperformance.jCombo.js"></script>
+    <script src="{{STATIC_URL}}js/comperformance/comperformance.validate.js"></script>
+    <script src="{{STATIC_URL}}js/comperformance/comperformance.highcharts.js"></script>
+    {% block extrajs %}{% endblock %}

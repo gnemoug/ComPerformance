@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+
+                <div class="mws-panel grid_8">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>个人信息</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                    <div class="wizard-nav wizard-nav-horizontal">
+                        <ul>
+                            <li data-wzd-id="wzd_17e9qcp1i1flsjc21g6n_0" class="current">
+                                <span>
+                                    <i class="icol-accept"></i>详细信息
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                        <form id="mws-wizard-form" class="mws-form" action="dashboard.html">
+                            
+                            <fieldset id="step-1" class="mws-form-inline">
+                                <legend class="wizard-label" style="display:none"><i class="icol-accept"></i>详细信息</legend>
+                                <div id class="mws-form-row">
+                                    <label class="mws-form-label">姓名</label>
+                                    <div class="mws-form-item">
+                                        <input type="text" name="fullname" readonly="readonly" value="{{ realname }}">
+                                    </div>
+                                </div>
+                                <div id class="mws-form-row">
+                                    <label class="mws-form-label">学号</label>
+                                    <div class="mws-form-item">
+                                        <input type="text" name="studentid" readonly="readonly" value="{{ studentid }}">
+                                    </div>
+                                </div>
+                                <div id class="mws-form-row">
+                                    <label class="mws-form-label">性别</label>
+                                    <div class="mws-form-item">
+                                        <input type="text" name="sex" readonly="readonly" value="{{ sex }}">
+                                    </div>
+                                </div>
+                                <div id class="mws-form-row">
+                                    <label class="mws-form-label">班级</label>
+                                    <div class="mws-form-item">
+                                        <input type="text" name="class" readonly="readonly" value="{{ class }}">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Copyright Your Website 2012. All Rights Reserved.
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>

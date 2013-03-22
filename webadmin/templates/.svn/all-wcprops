@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ComPerformance/!svn/ver/15/trunk/webadmin/templates
+END
+include.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ComPerformance/!svn/ver/14/trunk/webadmin/templates/include.html
+END
+dashboard.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ComPerformance/!svn/ver/6/trunk/webadmin/templates/dashboard.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ComPerformance/!svn/ver/6/trunk/webadmin/templates/index.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ComPerformance/!svn/ver/16/trunk/webadmin/templates/header.html
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/templates/footer.html
+END
+leftmenu.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/templates/leftmenu.html
+END

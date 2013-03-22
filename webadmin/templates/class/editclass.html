@@ -1,0 +1,24 @@
+<div id="edit-class-dialog" style="display:none">
+<form id="edit-class-form" method="post" class="mws-form" action='{% url editclass %}'>
+    {% csrf_token %}
+    <input type="hidden" name='class_id' id='edit_class_id' val=""/>
+        <div class="mws-form-inline">
+            <div class="mws-form-row">
+                <label class="mws-form-label">班号</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='classid' id='editclassid' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">班级名称</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='editclassname' name='classname' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

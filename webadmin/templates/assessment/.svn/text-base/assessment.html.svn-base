@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
+{% include "include.html" %}
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="/static/plugins/datatables/extra/TableTools.css" media="screen"/>
+{% endblock %}
+<body>
+
+    {% include "header.html" %}
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+        {% include "leftmenu.html" %}
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+            <br/>
+            <!-- Inner Container Start -->
+            <div class="container">
+                {% if form.assessment_id.errors or form.begindate.errors or form.enddate.errors or form.term.errors or form.excellent.errors or form.good.errors or form.ordinary.errors%}
+                    <div id="mws-validate-error" class="mws-form-message error" >
+                        {% if form.assessment_id.errors %}
+                            {{ form.assessment_id.errors }}
+                        {% endif %}
+                        {% if form.begindate.errors %}
+                            {{ form.begindate.errors }}
+                        {% endif %}
+                        {% if form.enddate.errors %}
+                            {{ form.enddate.errors }}
+                        {% endif %}
+                        {% if form.term.errors %}
+                            {{ form.term.errors }}
+                        {% endif %}
+                        {% if form.excellent.errors %}
+                            {{ form.excellent.errors }}
+                        {% endif %}
+                        {% if form.good.errors %}
+                            {{ form.good.errors }}
+                        {% endif %}
+                        {% if form.ordinary.errors %}
+                            {{ form.ordinary.errors }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if success %}
+                    <div id='success' class="mws-form-message success">
+                        您已经{{successinfo}}成功!
+                    </div>
+                {% endif %}
+                <div class="mws-panel grid_8" style="margin-bottom:0px">
+                    <div class="mws-panel-header">
+                        <span><i class="icon-magic"></i>互评设置管理</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+
+                        <table class="mws-datatable-fn mws-table" name="assessments" id="assessments" style="text-align:center;">
+                            <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>学期</th>
+                                    <th>开始日期</th>
+                                    <th>结束日期</th>
+                                    <th>优(%)</th>
+                                    <th>良(%)</th>
+                                    <th>中(%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            {% include "assessment/addassessment.html" %}
+            {% include "assessment/editassessment.html" %}
+            {% include "assessment/deleteassessment.html" %}
+            {% include "assessment/select.html" %}
+
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Copyright Your Website 2012. All Rights Reserved.
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+    
+    {% include "footer.html" %}
+    <script type="text/javascript" src="/static/plugins/datatables/extra/TableTools.js"></script>
+    <script type="text/javascript" src="/static/plugins/datatables/extra/ZeroClipboard.js"></script>
+</body>
+</html>

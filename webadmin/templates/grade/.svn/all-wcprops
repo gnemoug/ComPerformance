@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ComPerformance/!svn/ver/17/trunk/webadmin/templates/grade
+END
+grades.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/templates/grade/grades.html
+END
+import.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ComPerformance/!svn/ver/17/trunk/webadmin/templates/grade/import.html
+END
+classgrades.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ComPerformance/!svn/ver/18/trunk/webadmin/templates/grade/classgrades.html
+END

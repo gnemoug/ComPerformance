@@ -1,0 +1,43 @@
+<div id="add-student-dialog" style="display:none">
+<form id="add-student-form" method="post" class="mws-form" action='{% url addstudent %}'>
+    {% csrf_token %}
+        <div class="mws-form-inline">
+            <div class="mws-form-row">
+                <label class="mws-form-label">学号</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='studentid' id='studentid' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">姓名</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='studentname' name='studentname' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">性别</label>
+                <div class="mws-form-item large">
+                    <div id='studentsex'>
+                        <input type="radio" id='studentsex0' name='studentsex' value='0'/><label for='studentsex0'>男</label>
+                        <input type="radio" id='studentsex1' name='studentsex' value='1'/><label for='studentsex1'>女</label>
+                    </div>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">班级</label>
+                <div class="mws-form-item large">
+                    <select name='studentclass' id='studentaddclass' style='width:120px'>
+                    </select>
+                    <div class="error-messages">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

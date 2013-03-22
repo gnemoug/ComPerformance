@@ -1,0 +1,89 @@
+/*
+ * MWS Admin v2.1 - Demo Stylesheet
+ * This file is part of MWS Admin, an Admin template build for sale at ThemeForest.
+ * All copyright to this file is hold by Mairel Theafila <maimairel@yahoo.com> a.k.a nagaemas on ThemeForest.
+ * Last Updated:
+ * December 08, 2012
+ *
+ */
+
+#icons-tab div ul {
+    display: none;
+}
+
+#icons-tab.ui-tabs div ul {
+    display: block;
+}
+
+#icons-tab .ui-tabs-panel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#icons-tab .ui-tabs-panel ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+#jui-icons li {
+    float: left;
+    margin: 2px;
+    padding: 4px 0;
+}
+
+#jui-icons li.ui-state-default {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+}
+
+#jui-icons li span {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+#icol16 li, 
+#font-icons li, 
+#icons-colors li {
+    margin: 4px;
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    background-position: center center;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#icol16 li [class*="icol-"] {
+    margin-top: 8px;
+}
+
+#icons-colors li [class*="icol32-"] {
+    margin-top: 8px;
+}
+
+#font-icons li {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+}
+
+#font-icons li [class*="icon-"] {
+    line-height: 40px;
+}
+
+#icons-colors li {
+    width: 48px;
+    height: 48px;
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+}
+
+#eq span {
+    float: left;
+    margin: 0 15px;
+}

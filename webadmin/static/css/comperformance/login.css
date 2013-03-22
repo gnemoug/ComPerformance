@@ -1,0 +1,17 @@
+#mws-login .login-captcha{
+    background-repeat:no-repeat;
+    background-position:8px center;
+}
+#mws-login .login-captcha{
+    padding-left:32px;
+    border:1px solid #323232;
+    background-color:#fff;
+    min-height:38px;
+    width:100%;
+    -webkit-box-shadow:inset 0 0 8px rgba(0,0,0,0.15);
+    -moz-box-shadow:inset 0 0 8px rgba(0,0,0,0.15);
+    box-shadow:inset 0 0 8px rgba(0,0,0,0.15)
+}
+#mws-login .captcha.error{
+    border-color:#f3797f;
+}

@@ -1,0 +1,23 @@
+<div id="add-class-dialog" style="display:none">
+<form id="add-class-form" method="post" class="mws-form" action='{% url addclass %}'>
+    {% csrf_token %}
+        <div class="mws-form-inline">
+            <div class="mws-form-row">
+                <label class="mws-form-label">班号</label>
+                <div class="mws-form-item large">
+                    <input type="text" name='classid' id='classid' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+            <div class="mws-form-row">
+                <label class="mws-form-label">班级名称</label>
+                <div class="mws-form-item large">
+                    <input type="text" id='classname' name='classname' style="width:120px;"/>
+                        <div class="error-messages">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

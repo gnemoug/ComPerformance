@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ComPerformance/!svn/ver/6/trunk/webadmin/templates/accounts
+END
+change_password.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ComPerformance/!svn/ver/6/trunk/webadmin/templates/accounts/change_password.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ComPerformance/!svn/ver/6/trunk/webadmin/templates/accounts/login.html
+END

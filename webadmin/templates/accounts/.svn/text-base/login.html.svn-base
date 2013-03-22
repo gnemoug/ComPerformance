@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Viewport Metatag -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- Required Stylesheets -->
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/static/css/fonts/ptsans/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/static/css/fonts/icomoon/style.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="/static/css/login.min.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/static/css/mws-style.min.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="/static/css/mws-theme.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/static/css/comperformance/login.css" media="screen">
+
+<title>综合成绩管理系统-登录</title>
+
+</head>
+
+<body>
+
+    <div id="mws-login-wrapper">
+        <div id="mws-login">
+            <h1>登录</h1>
+            <div class="mws-login-lock"><i class="icon-lock"></i></div>
+            <div id="mws-login-form">
+                <form id="login-form" class="mws-form" action="{% url userlogin %}" method="post">
+                    {% csrf_token %} 
+                    {% if form.non_field_errors %}
+                    <div id="mws-validate-error" class="mws-form-message error">{{form.non_field_errors}}</div> 
+                    {% endif %}
+                    <div class="mws-form-row">
+                        <div class="mws-form-item">
+                            <input type="text" id="username" name="username" class="mws-login-username required" placeholder="username">
+                            <div class="error-messages">
+								{% if form.username.errors %}
+									<label for="username" generated="true" class="error" style="">{{form.username.errors}}</label>
+								{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <div class="mws-form-item">
+                            <input type="password" id="password" name="password" class="mws-login-password required" placeholder="password">
+                            <div class="error-messages">
+								{% if form.password.errors %}
+									<label for="password" generated="true" class="error" style="">{{form.password.errors}}</label>
+								{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mws-form-row">
+                        <center>
+							<label class="mws-form-label" style="color:#ffffff;display:inline;">请输入验证码<span class="required">*</span></label>
+							<div class="mws-form-item large" style="display:inline;">
+								{{captcha}}
+								<div class="error-messages">
+									{% if form.captcha.errors %}
+										<label for="id_captcha_1" generated="true" class="error" style="">{{form.captcha.errors}}</label>
+									{% endif %}
+								</div>
+							</div>
+                        </center>
+                    </div>
+                    <div class="mws-form-row">
+                        <input type="submit" value="Login" class="btn btn-success mws-login-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Plugins -->
+    <script src="/static/js/libs/jquery-1.8.2.min.js"></script>
+    <script src="/static/js/libs/jquery.placeholder.min.js"></script>
+    
+    <!-- jQuery-UI Dependent Scripts -->
+    <script src="/static/jui/js/jquery-ui-effects.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="/static/plugins/validate/jquery.validate-min.js"></script>
+
+    <!-- custom by myself -->
+    <script src="/static/js/comperformance/login.js"></script>
+    <script src="/static/js/comperformance/comperformance.validate.js"></script>
+
+</body>
+</html>
