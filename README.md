@@ -44,3 +44,16 @@ ComPerformance<br>
         20).查看院系以班级为单位的综合成绩情况
         21).查看所有人的互评信息
 </pre>
+<h1>
+搭建方法
+</h1>
+<pre>
+    1.下载最新版本 
+    2.在mysql数据库中建一个comperformance数据库，然后导入sql 
+    3.修改settings中的DATABASES 
+    4.sudo easy_install django-grappelli 
+    5.sudo easy_install xlrd 
+    6.python manage.py runserver 
+    7.用户名：guomeng 密码：guomeng 
+    8.登录
+</pre>
