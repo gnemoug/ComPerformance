@@ -167,14 +167,6 @@ LOGGING = {
             'datefmt': '%Y-%m-%d %H:%M:%S'
         },
     },
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        },
-        'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
-        },
-    },
     'handlers': {
         'null': {
             'level':'DEBUG',
@@ -203,7 +195,6 @@ LOGGING = {
         },
         'django_db_backends_logfile':{
             'level': 'WARNING',
-            'filters': ['require_debug_true'],
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(PROJECT_DIR, 'logs/django_db_backends_logfile.log'),#you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
             'backupCount': 5,
@@ -212,7 +203,6 @@ LOGGING = {
         },
         'mail_admins': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
         }
