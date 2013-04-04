@@ -2,6 +2,8 @@ ComPerformance<br>
 ==============
 <pre>
 一个使用django开发的学生综合成绩管理平台.
+项目基于django1.3.1，你可以通过sudo easy_install "django==1.3.1"安装；
+要想切换成原django版本可以通过sudo easy_install django进行。
 
 实现的功能如下:
     同学的功能：
