@@ -58,7 +58,8 @@ ComPerformance<br>
     3.修改settings中的DATABASES 
     4.sudo easy_install django-grappelli 
     5.sudo easy_install xlrd 
-    6.python manage.py runserver 
-    7.用户名：guomeng 密码：guomeng 
-    8.登录
+    6.sudo easy_install pil
+    7.python manage.py runserver 
+    8.用户名：guomeng 密码：guomeng 
+    9.登录
 </pre>
