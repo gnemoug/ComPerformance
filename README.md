@@ -63,3 +63,13 @@ ComPerformance<br>
     8.用户名：guomeng 密码：guomeng 
     9.登录
 </pre>
+
+<h1>
+安装问题
+</h1>
+<pre>
+关于验证码无法显示问题，可以参考：
+http://www.douban.com/group/topic/12636401/
+http://stackoverflow.com/questions/3544155/need-help-with-a-pil-error-ioerror-decoder-zip-not-available
+http://hi.baidu.com/wbwylbt/item/2f093d3f50433699b90c0326
+</pre>
