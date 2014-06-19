@@ -53,6 +53,16 @@ ComPerformance<br>
 搭建方法
 </h1>
 <pre>
+    1.下载最新版
+    2.在mysql数据库中建一个comperformance数据库，然后导入sql
+    3.修改settings中的DATABASES
+    4.virtualenv comperformance
+    5.source comperformance/bin/active
+    6.pip install -r requirements.txt
+    7.python manage.py runserver
+    8.用户名：guomeng 密码：guomeng
+</pre>
+<pre>
     1.下载最新版本 
     2.在mysql数据库中建一个comperformance数据库，然后导入sql 
     3.修改settings中的DATABASES 
