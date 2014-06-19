@@ -63,17 +63,6 @@ django-grappelli是2.3.8
     7.python manage.py runserver
     8.用户名：guomeng 密码：guomeng
 </pre>
-<pre>
-    1.下载最新版本 
-    2.在mysql数据库中建一个comperformance数据库，然后导入sql 
-    3.修改settings中的DATABASES 
-    4.sudo easy_install django-grappelli 
-    5.sudo easy_install xlrd 
-    6.sudo easy_install pil
-    7.python manage.py runserver 
-    8.用户名：guomeng 密码：guomeng 
-    9.登录
-</pre>
 
 <h1>
 安装问题
