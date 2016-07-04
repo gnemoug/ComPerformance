@@ -16,10 +16,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'mysql',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'comperformance',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': 'gnemoug',                  # Not used with sqlite3.
+        'PASSWORD': 'password',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -50,7 +50,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_DIR,'media')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -61,7 +61,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_DIR,'static').replace('\\','/')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static').replace('\\', '/')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -77,14 +77,14 @@ CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    ("images", os.path.join(STATIC_ROOT,'images').replace('\\','/')),
-    ("css",    os.path.join(STATIC_ROOT,'css').replace('\\','/')),
-    ("js",     os.path.join(STATIC_ROOT,'js').replace('\\','/')),
-    ("custom-plugins",     os.path.join(STATIC_ROOT,'custom-plugins').replace('\\','/')),
-    ("jui",     os.path.join(STATIC_ROOT,'jui').replace('\\','/')),
-    ("plugins",     os.path.join(STATIC_ROOT,'plugins').replace('\\','/')),
-    ("bootstrap",     os.path.join(STATIC_ROOT,'bootstrap').replace('\\','/')),
-    ("swf",     os.path.join(STATIC_ROOT,'swf').replace('\\','/')),
+    ("images", os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ("css",    os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ("js",     os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ("custom-plugins",     os.path.join(STATIC_ROOT, 'custom-plugins').replace('\\', '/')),
+    ("jui",     os.path.join(STATIC_ROOT, 'jui').replace('\\', '/')),
+    ("plugins",     os.path.join(STATIC_ROOT, 'plugins').replace('\\', '/')),
+    ("bootstrap",     os.path.join(STATIC_ROOT, 'bootstrap').replace('\\', '/')),
+    ("swf",     os.path.join(STATIC_ROOT, 'swf').replace('\\', '/')),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -95,7 +95,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -105,7 +105,7 @@ SECRET_KEY = 'd%heg*cr#)ct^e@#f)tyvtes9_xehqrscisptp!0yvax)v(46d'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -158,47 +158,47 @@ LOGGING = {
             'format': '%(levelname)s %(name)s %(asctime)s %(pathname)s %(module)s %(lineno)d %(message)s',
             'datefmt': '%Y-%m-%d %H:%M:%S'
         },
-        'django_request':{
+        'django_request': {
             'format': '%(levelname)s %(asctime)s %(pathname)s %(module)s %(lineno)d %(message)s status_code:%(status_code)d',
             'datefmt': '%Y-%m-%d %H:%M:%S'
         },
-        'django_db_backends':{
+        'django_db_backends': {
             'format': '%(levelname)s %(asctime)s %(pathname)s %(module)s %(lineno)d %(message)s duration:%(duration).3f sql:%(sql)s params:%(params)s',
             'datefmt': '%Y-%m-%d %H:%M:%S'
         },
     },
     'handlers': {
         'null': {
-            'level':'DEBUG',
-            'class':'django.utils.log.NullHandler',
+            'level': 'DEBUG',
+            'class': 'django.utils.log.NullHandler',
         },
-        'console':{
+        'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
-        'custom_log_file':{
+        'custom_log_file': {
             'level': 'WARNING',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(PROJECT_DIR, 'logs/django.log'),#you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
+            'filename': os.path.join(PROJECT_DIR, 'logs/django.log'),  # you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
             'backupCount': 5,
-            'maxBytes': '16777216', # 16megabytes(16M)
+            'maxBytes': '16777216',  # 16megabytes(16M)
             'formatter': 'verbose'
         },
-        'django_request_logfile':{
+        'django_request_logfile': {
             'level': 'WARNING',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(PROJECT_DIR, 'logs/django_request_logfile.log'),#you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
+            'filename': os.path.join(PROJECT_DIR, 'logs/django_request_logfile.log'),  # you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
             'backupCount': 5,
-            'maxBytes': '16777216', # 16megabytes(16M)
+            'maxBytes': '16777216',  # 16megabytes(16M)
             'formatter': 'django_request'
         },
-        'django_db_backends_logfile':{
+        'django_db_backends_logfile': {
             'level': 'WARNING',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(PROJECT_DIR, 'logs/django_db_backends_logfile.log'),#you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
+            'filename': os.path.join(PROJECT_DIR, 'logs/django_db_backends_logfile.log'),  # you need define your VAR_ROOT variable that points to your project path,and mkdir a logs directory in your project root path.
             'backupCount': 5,
-            'maxBytes': '16777216', # 16megabytes(16M)
+            'maxBytes': '16777216',  # 16megabytes(16M)
             'formatter': 'django_db_backends'
         },
         'mail_admins': {
@@ -214,20 +214,20 @@ LOGGING = {
             'propagate': False,
         },
         'django.request': {
-            'handlers': ['mail_admins','django_request_logfile'],
+            'handlers': ['mail_admins', 'django_request_logfile'],
             'level': 'WARNING',
             'propagate': True,
         },
         'django.db.backends': {
-            'handlers': ['django_db_backends_logfile',],
+            'handlers': ['django_db_backends_logfile', ],
             'level': 'WARNING',
             'propagate': True,
         },
-        'customapp': {#then you can change the level to control your custom app whether to output the debug infomation
+        'customapp': {  # then you can change the level to control your custom app whether to output the debug infomation
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': False,
         },
     },
 }
-GRAPPELLI_ADMIN_TITLE="<a href='/'>综合成绩管理系统</a>"
+GRAPPELLI_ADMIN_TITLE = "<a href='/'>综合成绩管理系统</a>"
